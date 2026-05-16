@@ -1,0 +1,41 @@
+/*  */
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+}
+/* Side Navigation */
+.sideNav {
+    width: 150px;
+    word-wrap: break-word;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    left: 10px;
+    background: #68636342;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+.sideNav a {
+    padding: 6px 10px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #17a72a;
+    display: block;
+}
+.sideNav a:hover {
+    color: #0d6319;
+}
+.main {
+    margin-left: 140px;
+    font-size: 28px;
+    padding: 0px 10px;
+}
+@media screen and (max-height: 450px) {
+    .sideNav {
+        padding-top: 15px;
+    }
+    .sideNav a {
+        font-size: 18px;
+    }
+}
