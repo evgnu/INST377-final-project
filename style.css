@@ -1,41 +1,45 @@
-/*  */
+/* header */
 .header {
-    width: 100%;
-    margin-bottom: 20px;
+    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    background-color: #17a72a;
+    top: 0;
+}
+.header a {
+    float: left;
     display: block;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+.header a.right {
+    float: right;
+}
+/* Column Container */
+.container {
+    display: flex;
+    flex-wrap: nowrap;
 }
 /* Side Navigation */
-.sideNav {
-    width: 150px;
-    word-wrap: break-word;
-    position: fixed;
-    z-index: 1;
-    top: 60px;
-    left: 10px;
-    background: #68636342;
-    overflow-x: hidden;
-    padding: 8px 0;
+.side {
+    flex: 0 0 20%;
+    background-color: #666;
+    padding: 15px;
 }
-.sideNav a {
+.side a {
     padding: 6px 10px 6px 16px;
     text-decoration: none;
     font-size: 25px;
     color: #17a72a;
     display: block;
 }
-.sideNav a:hover {
+.side a:hover {
     color: #0d6319;
 }
+/* Main */
 .main {
-    margin-left: 140px;
-    font-size: 28px;
-    padding: 0px 10px;
-}
-@media screen and (max-height: 450px) {
-    .sideNav {
-        padding-top: 15px;
-    }
-    .sideNav a {
-        font-size: 18px;
-    }
+    flex: 1;
+    background-color: aliceblue;
+    padding: 20px;
 }
