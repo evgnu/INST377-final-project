@@ -1,17 +1,16 @@
 html,
 body {
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
 }
 /* header */
 .header {
-    overflow: hidden;
     position: sticky;
-    position: -webkit-sticky;
     background-color: #4aba91;
     top: 0;
     left: 0;
     z-index: 1000;
+    min-height: 60px;
 }
 .header a {
     float: left;
@@ -34,10 +33,10 @@ body {
     position: fixed;
     top: 60px;
     left: 0;
-    width: 30%;
+    width: 25%;
     height: calc(100vh - 60px);
     box-sizing: border-box;
-    background-color: #494b4b;
+    background-color: #626767;
     padding: 20px;
 }
 .side a {
@@ -52,9 +51,9 @@ body {
 }
 /* Main */
 .main {
-    margin-left: 30%;
-    width: 70%;
-    background-color: aliceblue;
+    margin-left: 0;
+    flex: 1;
     padding: 20px;
     box-sizing: border-box;
+    padding-left: 23%;
 }
