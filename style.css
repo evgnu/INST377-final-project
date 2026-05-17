@@ -1,17 +1,25 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 /* header */
 .header {
     overflow: hidden;
     position: sticky;
     position: -webkit-sticky;
-    background-color: #17a72a;
+    background-color: #4aba91;
     top: 0;
+    left: 0;
+    z-index: 1000;
 }
 .header a {
     float: left;
     display: block;
     text-align: center;
-    padding: 10px 15px;
+    padding: 20px 20px;
     text-decoration: none;
+    font-size: 25px;
 }
 .header a.right {
     float: right;
@@ -19,27 +27,34 @@
 /* Column Container */
 .container {
     display: flex;
-    flex-wrap: nowrap;
+    min-height: calc(100vh - 70px);
 }
 /* Side Navigation */
 .side {
-    flex: 0 0 20%;
-    background-color: #666;
-    padding: 15px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 30%;
+    height: calc(100vh - 60px);
+    box-sizing: border-box;
+    background-color: #494b4b;
+    padding: 20px;
 }
 .side a {
     padding: 6px 10px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #17a72a;
+    color: #d4ce46;
     display: block;
 }
 .side a:hover {
-    color: #0d6319;
+    color: #949133;
 }
 /* Main */
 .main {
-    flex: 1;
+    margin-left: 30%;
+    width: 70%;
     background-color: aliceblue;
     padding: 20px;
+    box-sizing: border-box;
 }
