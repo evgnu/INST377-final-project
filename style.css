@@ -19,6 +19,8 @@ body {
     padding: 20px 20px;
     text-decoration: none;
     font-size: 25px;
+    color: #173455;
+    text-decoration: none;
 }
 .header a.right {
     float: right;
@@ -56,4 +58,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
     padding-left: 23%;
+}
+
+.about-text {
+    font-size: 20px;
 }
