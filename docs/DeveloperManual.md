@@ -2,7 +2,7 @@
 
 Prerequisites:
 
-1. 
+1. Clone the repository
 
 2. 
 
