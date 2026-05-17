@@ -1,0 +1,23 @@
+{
+  "name": "inst377-final-project",
+  "version": "1.0.0",
+  "description": "INST377 final project website deployment ",
+  "homepage": "https://github.com/evgnu/INST377-final-project#readme",
+  "bugs": {
+    "url": "https://github.com/evgnu/INST377-final-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgnu/INST377-final-project.git"
+  },
+  "license": "ISC",
+  "author": "Evan Nuesca",
+  "type": "commonjs",
+  "main": "home.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
