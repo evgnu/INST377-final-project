@@ -16,5 +16,7 @@ Prerequisites:
 **Bugs**
 
 **Road-Map:**
-- Integrate image API for better viewing experience
-- Add better search functionality
+- Integrate image API for better viewing experience on search functions
+- Improve image quality
+- Add fuzzy search functionality
+- Autocompletion

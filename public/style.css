@@ -67,10 +67,9 @@ body {
 /* Carousel */
 .swiper {
     width: 100%;
-    max-width: px;
-    height: 350px;
+    max-width: 800px;
+    max-height: 720px;
     margin: auto;
-    margin-bottom: 20px;
 }
 .swiper-slide {
     display: flex;
@@ -79,8 +78,8 @@ body {
     margin-bottom: 20px;
 }
 .swiper-slide img {
-    width: 500px;
-    height: 400px;
+    width: 800px;
+    height: 700px;
     object-fit: cover;
     border-radius: 10px;
 }
