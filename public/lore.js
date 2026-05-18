@@ -17,15 +17,15 @@ async function loadLore() {
         loreInfo.innerHTML = `
             <h2>${game.name}</h2>
             <p>
-                <strong>Released:</strong>
+                <strong>Released On:</strong>
                 ${game.released_date || "Unknown"}
             </p>
             <p>
-                <strong>Developer:</strong>
+                <strong>Developed By:</strong>
                 ${game.developer ||  "Unknown"}
             </p>
             <p>
-                <strong>Publisher:</strong>
+                <strong>Published By:</strong>
                 ${game.publisher || "Unknown"}
             </p>
             <p>
@@ -55,7 +55,7 @@ async function loadDungeons() {
 async function loadPlaces() {
     const response = await fetch("https://zelda.fanapis.com/api/places?limit=20");
     const placeData = await response.json();
-    placeData.data.forEach(place => {
+    placeData.data.forEach(async place => {
         const placeInfo = document.createElement("div");
         placeInfo.classList.add("Zelda-Game-Information");
         let inhabitants = "Unknown";
