@@ -13,3 +13,5 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 app.use(express.static(__dirname + '/public'));
+
+module.exports = app;
