@@ -1,7 +1,7 @@
 const zeldaLore = document.getElementById("zeldaLore");
 async function loadLore() {
     let zeldaAllLore = [];
-    for (let page = 0; pag < 10; page++) {
+    for (let page = 0; page < 10; page++) {
         const response = await fetch(`https://zelda.fanapis.com/api/games?limit=50&page=${page}`);
         const zeldaDataL = await response.json();
         zeldaAllLore = zeldaAllLore.concat(zeldaDataL.data);
@@ -27,11 +27,11 @@ async function loadLore() {
                 ${game.publisher || "Unknown"}
             </p>
             <p>
-                <strong>Lore Descriptino:</strong>
+                <strong>Lore Description:</strong>
                 ${game.description || "None"}
             </p>
         `;
-        zeldaLore
+        zeldaLore.appendChild(loreInfo);
     })
 }
 loadLore();

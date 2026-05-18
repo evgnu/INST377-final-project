@@ -111,3 +111,32 @@ body {
 .zelda-character-information strong {
     color: #7a4f00;
 }
+
+/* Lore */
+#zeldaLore {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+.zelda-game-information {
+    border: 3px solid #c9a227;
+    background-color: #f5ead2;
+    color: #2b1b08;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.zelda-game-information h2 {
+    margin-top: 0;
+    color: #234d20;
+    border-bottom: 2px solid #c9a227;
+    padding-bottom: 8px;
+}
+.zelda-game-information p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.zelda-game-information strong {
+    color: #7a4f00;
+}
