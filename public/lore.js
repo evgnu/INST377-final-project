@@ -1,4 +1,6 @@
 const zeldaLore = document.getElementById("zeldaLore");
+const zeldaDungeons = document.getElementById("zeldaDungeons");
+const zeldaPlaces = document.getElementById("zeldaPlaces");
 async function loadLore() {
     let zeldaAllLore = [];
     for (let page = 0; page < 10; page++) {
@@ -32,6 +34,56 @@ async function loadLore() {
             </p>
         `;
         zeldaLore.appendChild(loreInfo);
-    })
+    });
 }
+async function loadDungeons() {
+    const response = await fetch ("https://zelda.fanapis.com/api/dungeons?limit=20");
+    const dungeonData = await response.json();
+    dungeonData.data.forEach(dungeon => {
+        const dungeonInfo = document.createElement("div");
+        dungeonInfo.classList.add("Zelda-Game-Information");
+        dungeonInfo.innerHTML = `
+            <h2>${dungeon.name}</h2>
+            <p>
+                <strong>Description:</strong>
+                ${dungeon.description || "None"}
+            </p>
+        `;
+        zeldaDungeons.appendChild(dungeonInfo);
+    });
+}
+async function loadPlaces() {
+    const response = await fetch("https://zelda.fanapis.com/api/places?limit=20");
+    const placeData = await response.json();
+    placeData.data.forEach(place => {
+        const placeInfo = document.createElement("div");
+        placeInfo.classList.add("Zelda-Game-Information");
+        let inhabitants = "Unknown";
+        if (place.inhabitants && place.inhabitants.length > 0) {
+            const zeldaInhabitants = place.inhabitants.map(async characterURL => {
+                const characterResponse = await fetch(characterURL);
+                const characterData = await characterResponse.json();
+                return characterData.data.name;
+            });
+            const zeldaInhabitantNames = await Promise.all(zeldaInhabitants);
+            inhabitants = zeldaInhabitantNames.join(", ");
+
+        }
+        placeInfo.innerHTML = `
+            <h2>${place.name}</h2>
+            <p>
+                <strong>Inhabitants:</strong>
+                ${inhabitants}
+            </p>
+            <p>
+                <strong>Description:</strong>
+                ${place.description || "None"}
+            </p>
+        `;
+        zeldaPlaces.appendChild(placeInfo);
+    });
+}
+
 loadLore();
+loadDungeons();
+loadPlaces();
